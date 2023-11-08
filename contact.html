@@ -44,13 +44,22 @@
                          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                              <span class="navbar-toggler-icon"></span>
                          </button>
-                        <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                         <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.html" class="nav-item nav-link text-dark">Home</a>
                                 <a href="about.html" class="nav-item nav-link text-dark">About</a>
                                 <a href="service.html" class="nav-item nav-link text-dark">Service</a>
-                                <a href="pets.html" class="nav-item nav-link text-dark text-center">Pets</a>
-                                <a href="contact.html" class="nav-item nav-link text-dark active">Contact</a>
+                                <!-- dropdown menu pets -->
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle text-dark" data-toggle="dropdown">Pets</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="blog.html" class="dropdown-item">Cats</a>
+                                        <a href="single.html" class="dropdown-item">Dogs</a>
+                                        <a href="single.html" class="dropdown-item">Others</a>
+                                    </div>
+                                </div>
+                                <!-- dropdown menu pets -->
+                                <a href="contact.html" class="nav-item nav-link text-dark">Contact</a>
                             </div>
                         </div>
                     </nav>
