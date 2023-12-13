@@ -64,6 +64,7 @@ app.post("/submit", (req, res) => {
     } else {
       //console.log("Data inserted successfully.");
       // res.status(200).send("Data inserted successfully!!");
+      res.sendFile(path.join(__dirname, "index.html"));
     }
   });
 });
@@ -105,6 +106,22 @@ app.post("/signup", (req, res) => {
       // User registered successfully
       res.status(200);
       res.sendFile(path.join(__dirname, "sign in.html"));
+    }
+  });
+});
+
+app.post("/contact", (req, res) => {
+  const { name, email, subject, message } = req.body;
+  var query = `insert into contact (name,email,subject,message) values ('${name}','${email}','${subject}','${message}');`;
+
+  sql.query(connectionString, query, (err, result) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send("Internal Server Error");
+    } else {
+      //console.log("Data inserted successfully.");
+      // res.status(200).send("Data inserted successfully!!");
+      res.sendFile(path.join(__dirname, "index.html"));
     }
   });
 });
