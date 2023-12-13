@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Adoptito - Pet Adoption</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Pet Adoption - Find your new furry friend at Adoptito" name="description">
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+  <!-- Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <!-- Flaticon Font -->
+  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Start -->
+    <header class="container-fluid">
+      <div class="row py-3 px-lg-5">
+        <div class="col-lg-4">
+          <!-- Logo -->
+          <a href="index.html" class="navbar-brand d-none d-lg-block">
+            <h1 class="m-0 display-5 text-capitalize">
+              <i class="fas fa-paw text-primary"></i>
+              <span class="text-primary">Adopt</span>ito
+            </h1>
+          </a>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+          <div class="container-fluid p-0">
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse justify-content-center px-3"
+                id="navbarCollapse"
+              >
+                <ul class="navbar-nav ml-auto py-0">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark">
+                      <i class="fas fa-home"></i> Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="about.html" class="nav-link text-dark">
+                      <i class="fas fa-info-circle"></i> About
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="service.html" class="nav-link text-dark">
+                      <i class="fas fa-paw"></i> Service
+                    </a>
+                  </li>
+                  <!-- dropdown menu pets -->
+                  <li class="nav-item dropdown">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle text-dark"
+                      data-toggle="dropdown"
+                      ><i class="fas fa-paw"></i> Pets</a
+                    >
+                    <div class="dropdown-menu rounded-0 m-0">
+                      <a href="cats.html" class="dropdown-item">
+                        <i class="fas fa-cat"></i> Cats
+                      </a>
+                      <a href="dogs.html" class="dropdown-item">
+                        <i class="fas fa-dog"></i> Dogs
+                      </a>
+                      <a href="others.html" class="dropdown-item">
+                        <i class="fas fa-paw"></i> Others
+                      </a>
+                    </div>
+                  </li>
+                  <!-- dropdown menu pets -->
+                  <li class="nav-item">
+                    <a href="contact.html" class="nav-link text-dark">
+                      <i class="fas fa-envelope"></i> Contact
+                    </a>
+                  </li>
+                <li class="nav-item">
+                      <a href="sign up.html" class="nav-link text-dark active">
+                          <i class="fas fa-user-plus"></i> Sign Up
+                      </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+      <!-- Navbar End -->
+      
+    <!-- Sign Up Start -->
+    <div class="container-fluid pt-5">
+      <div class="d-flex flex-column text-center mb-5 pt-5">
+        <h4 class="text-secondary mb-3">Pet Adoption Sign Up</h4>
+        <h1 class="display-4 m-0">
+          Sign Up to <span class="text-primary">Find Your New Furry Friend</span>
+        </h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 mb-5">
+          <div class="signup-form">
+            <div id="success"></div>
+            <form name="sentMessage" id="signupForm" novalidate="novalidate">
+              <!-- Name -->
+              <div class="control-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    id="name"
+                    placeholder="Your Name"
+                    required="required"
+                    data-validation-required-message="Please enter your name"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="control-group mt-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                  </div>
+                  <input
+                    type="email"
+                    class="form-control p-4"
+                    id="email"
+                    placeholder="Your Email"
+                    required="required"
+                    data-validation-required-message="Please enter your email"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="control-group mt-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                  </div>
+                  <input
+                    type="password"
+                    class="form-control p-4"
+                    id="password"
+                    placeholder="Password"
+                    required="required"
+                    data-validation-required-message="Please enter your password"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="control-group mt-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                  </div>
+                  <input
+                    type="password"
+                    class="form-control p-4"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required="required"
+                    data-validation-required-message="Please confirm your password"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <!-- Sign Up Button -->
+              <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-primary py-2 px-lg-3 btn-lg" type="submit" id="signupButton">
+                  <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+              </div>
+            </form>
+            <div class="text-center mt-3">
+              <p>Already have an account? <a href="sign in.html">Sign In</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sign Up End -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+</body>
+</html>
