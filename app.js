@@ -18,10 +18,9 @@ app.post("/submit", (req, res) => {
   // SQL query to insert data into the 'pets' table
   switch (petType) {
     case "Cat":
-      query = `
-  insert into adoption (name,address,petName,email,reason) 
-  values ('${name}','${address}','${petName}','${email}','${reason}');
-  `;
+      query = `insert into adoption (name,address,petName,email,reason) 
+        values ('${name}','${address}','${petName}','${email}','${reason}');
+        `;
       break;
 
     case "Dog":
@@ -30,6 +29,9 @@ app.post("/submit", (req, res) => {
         `;
       break;
     case "Others":
+      query = `insert into othersAdoption (name,address,petName,email,reason) 
+        values ('${name}','${address}','${petName}','${email}','${reason}');
+        `;
       break;
 
     default:

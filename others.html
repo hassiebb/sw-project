@@ -169,6 +169,7 @@
                 src="img/Others/pet 2.webp"
                 alt=""
                 height="170"
+                data-othersname="Murray"
             /></a>
 
             <div class="card-body text-center p-0">
@@ -202,6 +203,7 @@
                 src="img/Others/Pet 1.webp"
                 alt=""
                 height="170"
+                data-othersname="Lexie"
             /></a>
 
             <div class="card-body text-center p-0">
@@ -235,6 +237,7 @@
                 src="img/Others/pet 4.webp"
                 alt=""
                 height="170"
+                data-othersname="Remi"
             /></a>
 
             <div class="card-body text-center p-0">
@@ -268,6 +271,7 @@
                 src="img/Others/pet 5.webp"
                 alt=""
                 height="170"
+                data-othersname="Linda"
             /></a>
 
             <div class="card-body text-center p-0">
@@ -301,6 +305,7 @@
                 src="img/Others/pet 6.webp"
                 alt=""
                 height="170"
+                data-othersname="Lisa"
             /></a>
 
             <div class="card-body text-center p-0">
@@ -325,11 +330,11 @@
         </div>
       </div>
       <script>
-        document.querySelectorAll(".card-img-top").forEach(function (dogImage) {
-          dogImage.addEventListener("click", function () {
-            const dogName = this.getAttribute("data-dogname");
-            localStorage.setItem("petName", dogName);
-            localStorage.setItem("Type", "Dog");
+        document.querySelectorAll(".card-img-top").forEach(function (othersImage) {
+          othersImage.addEventListener("click", function () {
+            const othersname = this.getAttribute("data-othersname");
+            localStorage.setItem("petName", othersname);
+            localStorage.setItem("Type", "Others");
           });
         });
       </script>
