@@ -67,3 +67,39 @@
     
 })(jQuery);
 
+      // Function to handle form submission
+      function submitForm(event) {
+        event.preventDefault(); // Prevent form from submitting
+
+        // Get form values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        // Perform form validation
+        if (name === "" || email === "" || password === "" || confirmPassword === "") {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match");
+          return;
+        }
+
+        // Form submission logic goes here
+        // You can send the form data to a server or perform any other action
+
+        // Clear form fields
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("confirmPassword").value = "";
+
+        alert("Form submitted successfully!");
+      }
+
+      // Add event listener to the form submit button
+      document.getElementById("signupButton").addEventListener("click", submitForm);
+    
