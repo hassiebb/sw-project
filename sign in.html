@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Adoptito - Pet Adoption</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="Pet Adoption - Find your new furry friend at Adoptito" name="description">
-  <!-- Favicon -->
-  <link href="img/favicon.ico" rel="icon">
-  <!-- Google Web Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-  <!-- Flaticon Font -->
-  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-  <!-- Libraries Stylesheet -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-  <!-- Customized Bootstrap Stylesheet -->
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Adoptito - Pet Adoption</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Pet Adoption - Find your new furry friend at Adoptito"
+      name="description"
+    />
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+    <!-- Google Web Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
     <!-- Navbar Start -->
     <header class="container-fluid">
       <div class="row py-3 px-lg-5">
-        <div class="col-lg-4 d-flex align-items-center">          <!-- Logo -->
+        <div class="col-lg-4 d-flex align-items-center">
+          <!-- Logo -->
           <a href="index.html" class="navbar-brand d-none d-lg-block">
             <h1 class="m-0 display-5 text-capitalize">
               <i class="fas fa-paw text-primary"></i>
@@ -34,7 +47,9 @@
         <div class="col-lg-8 text-center text-lg-right">
           <div class="container-fluid p-0">
             <!-- Navigation -->
-            <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5">
+            <nav
+              class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5"
+            >
               <button
                 type="button"
                 class="navbar-toggler"
@@ -90,10 +105,10 @@
                       <i class="fas fa-envelope"></i> Contact
                     </a>
                   </li>
-                <li class="nav-item">
-                      <a href="sign up.html" class="nav-link text-dark active">
-                          <i class="fas fa-user-plus"></i> Sign Up
-                      </a>
+                  <li class="nav-item">
+                    <a href="sign up.html" class="nav-link text-dark active">
+                      <i class="fas fa-user-plus"></i> Sign Up
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -102,68 +117,82 @@
         </div>
       </div>
     </header>
-      <!-- Navbar End -->
+    <!-- Navbar End -->
 
     <!-- Sign In Start -->
-    <div class="container-fluid pt-5">
-      <div class="d-flex flex-column text-center mb-5 pt-5">
-        <h4 class="text-secondary mb-3">Pet Adoption Sign In</h4>
-        <h1 class="display-4 m-0">
-          Sign In to <span class="text-primary">Access Your Account</span>
-        </h1>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-sm-8 mb-5">
-          <div class="signin-form">
-            <div id="signinSuccess"></div>
-            <form name="sentMessage" id="signinForm" novalidate="novalidate">
-              <!-- Email -->
-              <div class="control-group mt-3">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+    <!--------------------------------FORM STARTS HERE----------------------------------------->
+    <form action="http://localhost:3000/login" method="POST">
+      <div class="container-fluid pt-5">
+        <div class="d-flex flex-column text-center mb-5 pt-5">
+          <h4 class="text-secondary mb-3">Pet Adoption Sign In</h4>
+          <h1 class="display-4 m-0">
+            Sign In to <span class="text-primary">Access Your Account</span>
+          </h1>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-8 mb-5">
+            <div class="signin-form">
+              <div id="signinSuccess"></div>
+              <form name="sentMessage" id="signinForm" novalidate="novalidate">
+                <!-- Email -->
+                <div class="control-group mt-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-envelope"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="email"
+                      class="form-control p-4"
+                      id="signInEmail"
+                      name="signInEmail"
+                      placeholder="Your Email"
+                      required="required"
+                      data-validation-required-message="Please enter your email"
+                    />
+                    <p class="help-block text-danger"></p>
                   </div>
-                  <input
-                    type="email"
-                    class="form-control p-4"
-                    id="signinEmail"
-                    placeholder="Your Email"
-                    required="required"
-                    data-validation-required-message="Please enter your email"
-                  />
-                  <p class="help-block text-danger"></p>
                 </div>
-              </div>
 
-              <!-- Password -->
-              <div class="control-group mt-3">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                <!-- Password -->
+                <div class="control-group mt-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-lock"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="password"
+                      class="form-control p-4"
+                      id="signInPassword"
+                      name="signInPassword"
+                      placeholder="Password"
+                      required="required"
+                      data-validation-required-message="Please enter your password"
+                    />
+                    <p class="help-block text-danger"></p>
                   </div>
-                  <input
-                    type="password"
-                    class="form-control p-4"
-                    id="signinPassword"
-                    placeholder="Password"
-                    required="required"
-                    data-validation-required-message="Please enter your password"
-                  />
-                  <p class="help-block text-danger"></p>
                 </div>
-              </div>
 
-              <!-- Sign In Button -->
-              <div class="d-flex justify-content-center mt-4">
-                <button class="btn btn-primary py-2 px-lg-3 btn-lg" type="submit" id="signinButton">
-                  <i class="fas fa-sign-in-alt"></i> Sign In
-                </button>
-              </div>
-            </form>
+                <!-- Sign In Button -->
+                <div class="d-flex justify-content-center mt-4">
+                  <button
+                    class="btn btn-primary py-2 px-lg-3 btn-lg"
+                    type="submit"
+                    id="signinButton"
+                  >
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
+
     <!-- Sign In End -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -172,5 +201,5 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-</body>
+  </body>
 </html>
