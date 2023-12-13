@@ -44,6 +44,7 @@
           <!-- Logo -->
           <a href="index.html" class="navbar-brand d-none d-lg-block">
             <h1 class="m-0 display-5 text-capitalize">
+              <i class="fas fa-paw text-primary"></i>
               <span class="text-primary">Adopt</span>ito
             </h1>
           </a>
@@ -51,9 +52,7 @@
         <div class="col-lg-8 text-center text-lg-right">
           <div class="container-fluid p-0">
             <!-- Navigation -->
-            <nav
-              class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5"
-            >
+            <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5">
               <button
                 type="button"
                 class="navbar-toggler"
@@ -69,15 +68,19 @@
               >
                 <ul class="navbar-nav ml-auto py-0">
                   <li class="nav-item">
-                    <a href="index.html" class="nav-link text-dark">Home</a>
+                    <a href="index.html" class="nav-link text-dark">
+                      <i class="fas fa-home"></i> Home
+                    </a>
                   </li>
                   <li class="nav-item">
-                    <a href="about.html" class="nav-link text-dark">About</a>
+                    <a href="about.html" class="nav-link text-dark">
+                      <i class="fas fa-info-circle"></i> About
+                    </a>
                   </li>
                   <li class="nav-item">
-                    <a href="service.html" class="nav-link text-dark"
-                      >Service</a
-                    >
+                    <a href="service.html" class="nav-link text-dark">
+                      <i class="fas fa-paw"></i> Service
+                    </a>
                   </li>
                   <!-- dropdown menu pets -->
                   <li class="nav-item dropdown">
@@ -85,19 +88,30 @@
                       href="#"
                       class="nav-link dropdown-toggle text-dark"
                       data-toggle="dropdown"
-                      >Pets</a
+                      ><i class="fas fa-paw"></i> Pets</a
                     >
                     <div class="dropdown-menu rounded-0 m-0">
-                      <a href="cats.html" class="dropdown-item">Cats</a>
-                      <a href="dogs.html" class="dropdown-item">Dogs</a>
-                      <a href="others.html" class="dropdown-item">Others</a>
+                      <a href="cats.html" class="dropdown-item">
+                        <i class="fas fa-cat"></i> Cats
+                      </a>
+                      <a href="dogs.html" class="dropdown-item">
+                        <i class="fas fa-dog"></i> Dogs
+                      </a>
+                      <a href="others.html" class="dropdown-item">
+                        <i class="fas fa-paw"></i> Others
+                      </a>
                     </div>
                   </li>
                   <!-- dropdown menu pets -->
                   <li class="nav-item">
-                    <a href="contact.html" class="nav-link text-dark"
-                      >Contact</a
-                    >
+                    <a href="contact.html" class="nav-link text-dark">
+                      <i class="fas fa-envelope"></i> Contact
+                    </a>
+                  </li>
+                <li class="nav-item">
+                      <a href="sign up.html" class="nav-link text-dark">
+                          <i class="fas fa-user-plus"></i> Sign Up
+                      </a>
                   </li>
                 </ul>
               </div>
@@ -106,12 +120,12 @@
         </div>
       </div>
     </header>
-    <!-- Navbar End -->
+      <!-- Navbar End -->
 
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
       <div class="d-flex flex-column text-center mb-5 pt-5">
-        <h2 class="mb-3 text-secondary">Adoption Form</h2>
+        <h2 class="mb-3 text-secondary"><i class="fas fa-paw"></i> Adoption Form</h2>
         <h1 class="display-4 m-0">
           Choose Your <span class="text-primary">Pet</span>
         </h1>
@@ -124,77 +138,101 @@
             <form action="http://localhost:3000/submit" method="POST">
               <!-- Name -->
               <div class="control-group">
-                <input
-                  type="text"
-                  class="form-control p-4"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  required="required"
-                  data-validation-required-message="Please enter your name"
-                />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required="required"
+                    data-validation-required-message="Please enter your name"
+                  />
+                </div>
                 <p class="help-block text-danger"></p>
               </div>
 
               <!-- Email -->
               <div class="control-group">
-                <input
-                  type="email"
-                  class="form-control p-4"
-                  id="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required="required"
-                  data-validation-required-message="Please enter your email"
-                />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                  </div>
+                  <input
+                    type="email"
+                    class="form-control p-4"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required="required"
+                    data-validation-required-message="Please enter your email"
+                  />
+                </div>
                 <p class="help-block text-danger"></p>
               </div>
 
-              <!--Address-->
+              <!-- Address -->
               <div class="control-group">
-                <input
-                  type="text"
-                  class="form-control p-4"
-                  id="address"
-                  name="address"
-                  placeholder="Your Address"
-                  required="required"
-                  data-validation-required-message="Please enter your Address"
-                />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    id="address"
+                    name="address"
+                    placeholder="Your Address"
+                    required="required"
+                    data-validation-required-message="Please enter your Address"
+                  />
+                </div>
                 <p class="help-block text-danger"></p>
               </div>
 
               <!-- Pet -->
               <div class="control-group">
-                <input
-                  type="text"
-                  class="form-control p-4"
-                  id="petName"
-                  name="petName"
-                  placeholder="Desired Pet Name"
-                  readonly
-                  required="required"
-                  data-validation-required-message="Please enter a subject"
-                />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-paw"></i></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    id="petName"
+                    name="petName"
+                    placeholder="Desired Pet Name"
+                    readonly
+                    required="required"
+                    data-validation-required-message="Please enter a subject"
+                  />
+                </div>
                 <p class="help-block text-danger"></p>
               </div>
 
-               <!--Type Of Pet-->
-               <div class="control-grou" name="">
-                <div class="control-group"><b>Type of Pet</b></div>
-                <input
-                type="text"
-                class="form-control p-4"
-                id="petType"
-                name="petType"
-                placeholder="Desired Pet Type"
-                readonly
-                required="required"
-                data-validation-required-message="Please enter a Type"
-              />
+              <!-- Type Of Pet -->
+              <div class="control-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-paw"></i></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    id="petType"
+                    name="petType"
+                    placeholder="Desired Pet Type"
+                    readonly
+                    required="required"
+                    data-validation-required-message="Please enter a Type"
+                  />
+                </div>
               </div>
 
-              <!--Survey-->
+              <!-- Survey -->
               <div class="control-group">
                 <label for=""><b>Have you ever adopted a Pet before?</b></label>
                 &nbsp; &nbsp; <b>Yes</b>
@@ -211,48 +249,52 @@
                 <input type="radio" name="usedAdaptito" />
               </div>
 
-              <!-- message -->
+              <!-- Message -->
               <div class="control-group">
-                <textarea
-                  class="form-control p-4"
-                  rows="6"
-                  id="reason"
-                  name="reason"
-                  placeholder="Reason for Adoption"
-                  required="required"
-                  data-validation-required-message="Please enter your message"
-                ></textarea>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                  </div>
+                  <textarea
+                    class="form-control p-4"
+                    rows="6"
+                    id="reason"
+                    name="reason"
+                    placeholder="Reason for Adoption"
+                    required="required"
+                    data-validation-required-message="Please enter your message"
+                  ></textarea>
+                </div>
                 <p class="help-block text-danger"></p>
               </div>
 
-              <!-- submit button -->
+              <!-- Submit button -->
               <div>
                 <button
                   class="btn btn-primary py-3 px-5"
                   type="submit"
                   id="sendMessageButton"
                 >
-                  Adopt now
+                  <i class="fas fa-paw"></i> Adopt now
                 </button>
               </div>
 
-              <!--Script for Receiving  variables-->
+              <!-- Script for Receiving variables -->
               <script>
-                 const catName = localStorage.getItem('petName');
-                 document.getElementById('petName').value = catName;
-                 const Type = localStorage.getItem('Type');
-                 document.getElementById('petType').value = Type;
+                const catName = localStorage.getItem('petName');
+                document.getElementById('petName').value = catName;
+                const Type = localStorage.getItem('Type');
+                document.getElementById('petType').value = Type;
               </script>
             </form>
           </div>
         </div>
       </div>
-      </div>
     </div>
     <!-- Contact End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <footer class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
       <div class="row pt-5">
         <div class="col-lg-4 col-md-12 mb-5">
           <h1 class="mb-3 display-5 text-capitalize text-white">
@@ -270,10 +312,10 @@
             <div class="col-md-4 mb-5">
               <h5 class="text-primary mb-4">Get In Touch</h5>
               <p>
-                <i class="fa fa-map-marker-alt mr-2"></i>Mokattam, Cairo, Egypt
+                <i class="fa fa-map-marker-alt mr-2"></i> Mokattam, Cairo, Egypt
               </p>
-              <p><i class="fa fa-phone-alt mr-2"></i>+01154496852</p>
-              <p><i class="fa fa-envelope mr-2"></i>Adoptito@Gmail.com</p>
+              <p><i class="fa fa-phone-alt mr-2"></i> +01154496852</p>
+              <p><i class="fa fa-envelope mr-2"></i> Adoptito@Gmail.com</p>
               <div class="d-flex justify-content-start mt-4">
                 <a
                   class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
@@ -305,59 +347,46 @@
               <h5 class="text-primary mb-4">Popular Links</h5>
               <div class="d-flex flex-column justify-content-start">
                 <a class="text-white mb-2" href="index.html"
-                  ><i class="fa fa-angle-right mr-2"></i>Home</a
+                  ><i class="fa fa-angle-right mr-2"></i> Home</a
                 >
                 <a class="text-white mb-2" href="about.html"
-                  ><i class="fa fa-angle-right mr-2"></i>About Us</a
+                  ><i class="fa fa-angle-right mr-2"></i> About Us</a
                 >
                 <a class="text-white mb-2" href="service.html"
-                  ><i class="fa fa-angle-right mr-2"></i>Our Services</a
+                  ><i class="fa fa-angle-right mr-2"></i> Our Services</a
                 >
                 <a class="text-white mb-2" href="dogs.html"
-                  ><i class="fa fa-angle-right mr-2"></i>Pets For Adoption</a
+                  ><i class="fa fa-angle-right mr-2"></i> Pets For Adoption</a
                 >
                 <a class="text-white" href="#"
-                  ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
+                  ><i class="fa fa-angle-right mr-2"></i> Contact Us</a
+                >
+              </div>
+            </div>
+            <div class="col-md-4 mb-5">
+              <h5 class="text-primary mb-4">Helpful Links</h5>
+              <div class="d-flex flex-column justify-content-start">
+                <a class="text-white mb-2" href="donate.html"
+                  ><i class="fa fa-angle-right mr-2"></i> Donate</a
+                >
+                <a class="text-white mb-2" href="volunteer.html"
+                  ><i class="fa fa-angle-right mr-2"></i> Volunteer</a
+                >
+                <a class="text-white mb-2" href="events.html"
+                  ><i class="fa fa-angle-right mr-2"></i> Events</a
+                >
+                <a class="text-white mb-2" href="blog.html"
+                  ><i class="fa fa-angle-right mr-2"></i> Blog</a
+                >
+                <a class="text-white" href="faq.html"
+                  ><i class="fa fa-angle-right mr-2"></i> FAQ</a
                 >
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="container-fluid text-white py-4 px-sm-3 px-md-5"
-      style="background: #111111"
-    >
-      <div class="row">
-        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-          <p class="m-0 text-white">
-            &copy;
-            <a class="text-white font-weight-bold" href="index.html">Adoptito</a
-            >. All Rights Reserved. Designed by
-            <a class="text-white font-weight-bold" href="about.html"
-              >Team members.</a
-            >
-          </p>
-        </div>
-        <div class="col-md-6 text-center text-md-right">
-          <ul class="nav d-inline-flex">
-            <li class="nav-item">
-              <a class="nav-link text-white py-0" href="#">Privacy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white py-0" href="#">Terms</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white py-0" href="#">FAQs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white py-0" href="#">Help</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    </footer>
     <!-- Footer End -->
 
     <!-- Back to Top -->
