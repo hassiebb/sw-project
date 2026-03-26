@@ -171,12 +171,8 @@
                 document.getElementById('pet_name').value = petData.name;
                 document.getElementById('animal_type').value = petData.type;
                 
-                if(petData.type.toLowerCase() === 'dog') {
-                    document.getElementById('summaryImg').src = 'img/dogs/dog 1.webp';
-                } else if(petData.type.toLowerCase() === 'cat') {
-                    document.getElementById('summaryImg').src = 'img/cats/cat 1.webp';
-                } else {
-                    document.getElementById('summaryImg').src = 'img/Others/pet 1.webp';
+                if(petData.image) {
+                    document.getElementById('summaryImg').src = petData.image;
                 }
             }
         });

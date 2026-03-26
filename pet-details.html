@@ -145,17 +145,59 @@
             <h2 class="text-center mb-5">You Might Also <span class="text-accent">Love</span></h2>
             <div class="row">
                 <div class="col-md-3 mb-4">
-                    <div class="card-market p-3">
-                        <img src="img/cats/cat 2.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Oliver" data-type="Cat" data-age="3 Years" data-breed="Maine Coon" data-desc="Oliver is a gentle giant.">
+                        <img src="img/cats/cat 2.png" class="img-fluid rounded-lg mb-3" alt="sim">
                         <h5 class="m-0">Oliver</h5>
                         <p class="text-muted small m-0">Maine Coon</p>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <div class="card-market p-3">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Bella" data-type="Dog" data-age="2 Years" data-breed="Labrador" data-desc="Bella is very friendly.">
                         <img src="img/dogs/dog 3.webp" class="img-fluid rounded-lg mb-3" alt="sim">
                         <h5 class="m-0">Bella</h5>
                         <p class="text-muted small m-0">Labrador</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Chloe" data-type="Cat" data-age="1 Year" data-breed="Siamese" data-desc="Chloe loves to talk.">
+                        <img src="img/cats/cat 4.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Chloe</h5>
+                        <p class="text-muted small m-0">Siamese</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Charlie" data-type="Dog" data-age="4 Years" data-breed="Beagle" data-desc="Charlie is a master sniffer.">
+                        <img src="img/dogs/dog 5.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Charlie</h5>
+                        <p class="text-muted small m-0">Beagle</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Daisy" data-type="Other" data-age="6 Months" data-breed="Rabbit" data-desc="Daisy is very soft.">
+                        <img src="img/Others/pet 4.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Daisy</h5>
+                        <p class="text-muted small m-0">Rabbit</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Jasper" data-type="Dog" data-age="5 Years" data-breed="Husky" data-desc="Jasper loves the cold.">
+                        <img src="img/dogs/dog 9.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Jasper</h5>
+                        <p class="text-muted small m-0">Husky</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Milo" data-type="Cat" data-age="2 Years" data-breed="Bengal" data-desc="Milo is a wild spirit.">
+                        <img src="img/cats/cat 10.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Milo</h5>
+                        <p class="text-muted small m-0">Bengal</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3 pet-detail-link cursor-pointer" data-name="Rocky" data-type="Other" data-age="1 Year" data-breed="Hamster" data-desc="Rocky is very fast.">
+                        <img src="img/Others/pet 3.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Rocky</h5>
+                        <p class="text-muted small m-0">Hamster</p>
                     </div>
                 </div>
             </div>
@@ -184,13 +226,9 @@
                 document.getElementById('petStory').textContent = petData.description;
                 document.getElementById('petTypeBadge').textContent = petData.type.toUpperCase();
                 
-                // Selection of image based on type for demo purposes
-                if(petData.type.toLowerCase() === 'dog') {
-                    document.getElementById('petMainImage').src = 'img/dogs/dog 1.webp';
-                } else if(petData.type.toLowerCase() === 'cat') {
-                     document.getElementById('petMainImage').src = 'img/cats/cat 1.webp';
-                } else {
-                     document.getElementById('petMainImage').src = 'img/Others/pet 1.webp';
+                // Dynamic Image Loading
+                if(petData.image) {
+                    document.getElementById('petMainImage').src = petData.image;
                 }
             }
         });

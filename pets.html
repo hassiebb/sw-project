@@ -73,16 +73,20 @@
                     <div class="mb-5">
                         <h6 class="text-uppercase font-weight-bold mb-3">Species</h6>
                         <div class="custom-control custom-checkbox mb-2">
-                            <input type="checkbox" class="custom-control-input" id="type-dogs" checked>
-                            <label class="custom-control-label" for="type-dogs">Dogs</label>
+                            <input type="checkbox" class="custom-control-input" id="type-dog" checked>
+                            <label class="custom-control-label" for="type-dog">Dogs</label>
                         </div>
                         <div class="custom-control custom-checkbox mb-2">
-                            <input type="checkbox" class="custom-control-input" id="type-cats" checked>
-                            <label class="custom-control-label" for="type-cats">Cats</label>
+                            <input type="checkbox" class="custom-control-input" id="type-cat" checked>
+                            <label class="custom-control-label" for="type-cat">Cats</label>
                         </div>
                         <div class="custom-control custom-checkbox mb-2">
-                            <input type="checkbox" class="custom-control-input" id="type-others">
-                            <label class="custom-control-label" for="type-others">Others</label>
+                            <input type="checkbox" class="custom-control-input" id="type-bird">
+                            <label class="custom-control-label" for="type-bird">Birds</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="type-other">
+                            <label class="custom-control-label" for="type-other">Others</label>
                         </div>
                     </div>
 
@@ -90,11 +94,15 @@
                     <div class="mb-5">
                         <h6 class="text-uppercase font-weight-bold mb-3">Age Group</h6>
                         <div class="custom-control custom-radio mb-2">
+                            <input type="radio" name="age" class="custom-control-input" id="age-all" checked>
+                            <label class="custom-control-label" for="age-all">All Ages</label>
+                        </div>
+                        <div class="custom-control custom-radio mb-2">
                             <input type="radio" name="age" class="custom-control-input" id="age-baby">
                             <label class="custom-control-label" for="age-baby">Baby (0-1y)</label>
                         </div>
                         <div class="custom-control custom-radio mb-2">
-                            <input type="radio" name="age" class="custom-control-input" id="age-young" checked>
+                            <input type="radio" name="age" class="custom-control-input" id="age-young">
                             <label class="custom-control-label" for="age-young">Young (1-3y)</label>
                         </div>
                         <div class="custom-control custom-radio mb-2">
@@ -103,8 +111,8 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-market btn-market-primary w-100">Apply Filters</button>
-                    <button class="btn btn-link w-100 mt-2 text-muted small">Clear All</button>
+                    <button id="applyFilters" class="btn btn-market btn-market-primary w-100">Apply Filters</button>
+                    <button id="clearFilters" class="btn btn-link w-100 mt-2 text-muted small">Clear All</button>
                 </div>
             </div>
 
@@ -123,9 +131,12 @@
                 </div>
 
                 <div class="row" id="petMarketGrid">
+                    <!-- Pets will be populated here -->
+                    <!-- Dog 1-12, Cat 1-10, Others 1-6 -->
+                    
                     <!-- Dog 1 -->
-                    <div class="col-md-6 mb-5">
-                        <div class="card-market pet-detail-link" data-name="Max" data-type="Dog" data-age="2 Years" data-breed="Husky" data-desc="Max is a high-energy Husky who loves running and wide open spaces.">
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Max" data-type="Dog" data-age-group="young" data-age="2 Years" data-breed="Husky" data-desc="Max is a high-energy Husky who loves running.">
                             <div class="img-wrapper">
                                 <span class="badge-type">Dog</span>
                                 <img src="img/dogs/dog 2.webp" alt="Max">
@@ -145,8 +156,8 @@
                         </div>
                     </div>
                     <!-- Cat 1 -->
-                    <div class="col-md-6 mb-5">
-                        <div class="card-market pet-detail-link" data-name="Olive" data-type="Cat" data-age="1 Year" data-breed="Siamese" data-desc="Olive is a chatty Siamese cat who loves to be the center of attention.">
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Olive" data-type="Cat" data-age-group="young" data-age="1 Year" data-breed="Siamese" data-desc="Olive is a chatty Siamese cat.">
                             <div class="img-wrapper">
                                 <span class="badge-type">Cat</span>
                                 <img src="img/cats/cat 3.webp" alt="Olive">
@@ -166,8 +177,8 @@
                         </div>
                     </div>
                     <!-- Dog 2 -->
-                    <div class="col-md-6 mb-5">
-                        <div class="card-market pet-detail-link" data-name="Bailey" data-type="Dog" data-age="3 Years" data-breed="Golden Retriever" data-desc="Bailey is a calm, well-trained dog who is perfect for families with children.">
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Bailey" data-type="Dog" data-age-group="adult" data-age="3 Years" data-breed="Golden Retriever" data-desc="Bailey is a calm, well-trained dog.">
                             <div class="img-wrapper">
                                 <span class="badge-type">Dog</span>
                                 <img src="img/dogs/dog 3.webp" alt="Bailey">
@@ -186,11 +197,53 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Others 1 -->
-                    <div class="col-md-6 mb-5">
-                        <div class="card-market pet-detail-link" data-name="Steffan" data-type="Hamster" data-age="2 Months" data-breed="Syrian" data-desc="Steffan is a small, quiet hamster who enjoys a steady supply of treats and exercise.">
+                    <!-- Bird 1 -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Sky" data-type="Bird" data-age-group="baby" data-age="6 Months" data-breed="Parrot" data-desc="Sky is a brilliant parrot.">
                             <div class="img-wrapper">
-                                <span class="badge-type">Others</span>
+                                <span class="badge-type">Bird</span>
+                                <img src="img/carousel-1.jpg" alt="Sky" style="filter: sepia(1) hue-rotate(90deg);">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Sky</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Amazon Parrot • 6 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 2 (Luna) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Luna" data-type="Cat" data-age-group="adult" data-age="4 Years" data-breed="Persian" data-desc="Luna is a majestic Persian cat.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 1.webp" alt="Luna">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Luna</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Persian • 4 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other 1 (Hamster) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Steffan" data-type="Other" data-age-group="baby" data-age="2 Months" data-breed="Hamster" data-desc="Steffan is a friendly hamster.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Other</span>
                                 <img src="img/Others/pet 3.webp" alt="Steffan">
                             </div>
                             <div class="card-market-body">
@@ -207,16 +260,622 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Dog 3 (Duke) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Duke" data-type="Dog" data-age-group="young" data-age="1 Year" data-breed="Pug" data-desc="Duke is a playful Pug.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 4.webp" alt="Duke">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Duke</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Pug • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 3 (Misty) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Misty" data-type="Cat" data-age-group="baby" data-age="4 Months" data-breed="Tabby" data-desc="Misty is a sweet Tabby kitten.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 4.webp" alt="Misty">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Misty</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Tabby • 4 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other 2 (Rabbit) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Bunny" data-type="Other" data-age-group="young" data-age="1 Year" data-breed="Lop" data-desc="Bunny is very soft and quiet.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Other</span>
+                                <img src="img/Others/pet 4.webp" alt="Bunny">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Bunny</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Lop Rabbit • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 4 (Buddy) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Buddy" data-type="Dog" data-age-group="adult" data-age="5 Years" data-breed="Beagle" data-desc="Buddy is a friendly Beagle.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 5.webp" alt="Buddy">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Buddy</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Beagle • 5 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 4 (Smokey) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Smokey" data-type="Cat" data-age-group="adult" data-age="6 Years" data-breed="Russian Blue" data-desc="Smokey is a calm Russian Blue.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 5.webp" alt="Smokey">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Smokey</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Russian Blue • 6 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other 3 (Guinea Pig) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Pip" data-type="Other" data-age-group="baby" data-age="3 Months" data-breed="Guinea Pig" data-desc="Pip loves to squeak and eat veggies.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Other</span>
+                                <img src="img/Others/pet 5.webp" alt="Pip">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Pip</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Guinea Pig • 3 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 5 (Bella) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Bella" data-type="Dog" data-age-group="young" data-age="1 Year" data-breed="Labrador" data-desc="Bella is an energetic Labrador.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 6.webp" alt="Bella">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Bella</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Labrador • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 5 (Tiger) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Tiger" data-type="Cat" data-age-group="young" data-age="2 Years" data-breed="Bengal" data-desc="Tiger is a playful Bengal cat.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 6.webp" alt="Tiger">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Tiger</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Bengal • 2 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other 4 (Ferret) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Bandit" data-type="Other" data-age-group="young" data-age="1 Year" data-breed="Ferret" data-desc="Bandit is mischievous and loves to explore.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Other</span>
+                                <img src="img/Others/pet 6.webp" alt="Bandit">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Bandit</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Ferret • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 6 (Rocky) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Rocky" data-type="Dog" data-age-group="adult" data-age="4 Years" data-breed="German Shepherd" data-desc="Rocky is a loyal German Shepherd.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 7.webp" alt="Rocky">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Rocky</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">German Shepherd • 4 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 6 (Shadow) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Shadow" data-type="Cat" data-age-group="adult" data-age="3 Years" data-breed="Bombay" data-desc="Shadow is a sleek Bombay cat.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 7.webp" alt="Shadow">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Shadow</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Bombay • 3 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other 5 (Hedgehog) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Quill" data-type="Other" data-age-group="baby" data-age="5 Months" data-breed="Hedgehog" data-desc="Quill is a shy but curious hedgehog.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Other</span>
+                                <img src="img/Others/pet 7.webp" alt="Quill">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Quill</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Hedgehog • 5 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 7 (Daisy) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Daisy" data-type="Dog" data-age-group="baby" data-age="8 Months" data-breed="Dachshund" data-desc="Daisy is a playful Dachshund puppy.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 8.webp" alt="Daisy">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Daisy</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Dachshund • 8 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 7 (Cleo) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Cleo" data-type="Cat" data-age-group="young" data-age="1 Year" data-breed="Sphynx" data-desc="Cleo is a unique Sphynx cat.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 8.webp" alt="Cleo">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Cleo</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Sphynx • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other 6 (Sugar Glider) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Gizmo" data-type="Other" data-age-group="young" data-age="1 Year" data-breed="Sugar Glider" data-desc="Gizmo is an adorable sugar glider.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Other</span>
+                                <img src="img/Others/pet 8.webp" alt="Gizmo">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Gizmo</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Sugar Glider • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 8 (Charlie) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Charlie" data-type="Dog" data-age-group="young" data-age="2 Years" data-breed="Poodle" data-desc="Charlie is a smart Poodle.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 9.webp" alt="Charlie">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Charlie</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Poodle • 2 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 8 (Jasper) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Jasper" data-type="Cat" data-age-group="adult" data-age="5 Years" data-breed="Maine Coon" data-desc="Jasper is a gentle giant Maine Coon.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 9.webp" alt="Jasper">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Jasper</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Maine Coon • 5 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 9 (Lucy) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Lucy" data-type="Dog" data-age-group="baby" data-age="6 Months" data-breed="Chihuahua" data-desc="Lucy is a tiny Chihuahua puppy.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 10.webp" alt="Lucy">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Lucy</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Chihuahua • 6 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 9 (Willow) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Willow" data-type="Cat" data-age-group="young" data-age="2 Years" data-breed="Ragdoll" data-desc="Willow is a sweet Ragdoll cat.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 10.webp" alt="Willow">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Willow</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Ragdoll • 2 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 10 (Cooper) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Cooper" data-type="Dog" data-age-group="adult" data-age="3 Years" data-breed="Bulldog" data-desc="Cooper is a charming Bulldog.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 11.webp" alt="Cooper">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Cooper</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Bulldog • 3 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 10 (Milo) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Milo" data-type="Cat" data-age-group="baby" data-age="7 Months" data-breed="Domestic Shorthair" data-desc="Milo is a curious kitten.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 11.webp" alt="Milo">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Milo</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Domestic Shorthair • 7 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 11 (Sophie) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Sophie" data-type="Dog" data-age-group="young" data-age="1 Year" data-breed="Shih Tzu" data-desc="Sophie is a sweet Shih Tzu.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 12.webp" alt="Sophie">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Sophie</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Shih Tzu • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 12 (Leo) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Leo" data-type="Dog" data-age-group="adult" data-age="6 Years" data-breed="Rottweiler" data-desc="Leo is a protective Rottweiler.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 13.webp" alt="Leo">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Leo</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Rottweiler • 6 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bird 2 (Sunny) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Sunny" data-type="Bird" data-age-group="young" data-age="1 Year" data-breed="Cockatiel" data-desc="Sunny is a cheerful Cockatiel.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Bird</span>
+                                <img src="img/Others/Pet 1.webp" alt="Sunny">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Sunny</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Cockatiel • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bird 3 (Kiwi) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Kiwi" data-type="Bird" data-age-group="baby" data-age="4 Months" data-breed="Parakeet" data-desc="Kiwi is a small parakeet.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Bird</span>
+                                <img src="img/Others/pet 2.webp" alt="Kiwi">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Kiwi</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Parakeet • 4 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bird 4 (Mango) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Mango" data-type="Bird" data-age-group="adult" data-age="3 Years" data-breed="Conure" data-desc="Mango is a conure.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Bird</span>
+                                <img src="img/Others/pet 3.webp" alt="Mango">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Mango</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Conure • 3 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bird 5 (Ollie) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Ollie" data-type="Bird" data-age-group="young" data-age="2 Years" data-breed="African Grey" data-desc="Ollie is very smart.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Bird</span>
+                                <img src="img/Others/pet 4.webp" alt="Ollie">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Ollie</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">African Grey • 2 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bird 6 (Pip) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Pip" data-type="Bird" data-age-group="baby" data-age="9 Months" data-breed="Lovebird" data-desc="Pip is affectionate.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Bird</span>
+                                <img src="img/Others/pet 5.webp" alt="Pip">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Pip</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Lovebird • 9 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bird 7 (Zazu) -->
+                    <div class="col-md-6 col-lg-4 mb-5 pet-item">
+                        <div class="card-market pet-detail-link" data-name="Zazu" data-type="Bird" data-age-group="adult" data-age="4 Years" data-breed="Macaw" data-desc="Zazu is majestic.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Bird</span>
+                                <img src="img/Others/pet 6.webp" alt="Zazu">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Zazu</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Macaw • 4 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Pagination -->
                 <nav class="mt-5">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                    <ul class="pagination justify-content-center" id="marketPagination">
+                        <!-- Pagination will be dynamically generated -->
                     </ul>
                 </nav>
             </div>
