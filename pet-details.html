@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pet Profile | Adoptito</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 4 (Core Structure) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Marketplace Styles -->
+    <link href="css/market.css" rel="stylesheet">
+    
+    <style>
+        .spec-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .spec-item:hover {
+            border-color: var(--accent-color);
+            background: rgba(82, 183, 136, 0.05);
+        }
+        .personality-tag {
+            background: var(--bg-light);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            display: inline-block;
+            margin: 0 10px 10px 0;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-market px-lg-5">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 text-primary"><i class="fas fa-paw mr-2"></i>Adopt<span class="text-accent">ito</span></h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="pets.html" class="nav-item nav-link active">Marketplace</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="sign in.html" class="btn btn-market btn-market-outline mr-3">Sign In</a>
+                <a href="sign up.html" class="btn btn-market btn-market-primary">Register</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Product Detail Start -->
+    <div class="container section-padding" style="margin-top: 50px;">
+        <div class="row">
+            <!-- Image Gallery -->
+            <div class="col-lg-6 mb-5 reveal">
+                <div class="rounded-lg overflow-hidden shadow-sm bg-white p-3">
+                    <img id="petMainImage" src="img/cats/cat 1.webp" class="img-fluid w-100 rounded-lg" alt="Pet Image">
+                    <div class="row mt-4 px-2">
+                        <div class="col-3 p-1"><img src="img/cats/cat 2.webp" class="img-fluid rounded-lg opacity-50 cursor-pointer" alt="thumb"></div>
+                        <div class="col-3 p-1"><img src="img/cats/cat 3.webp" class="img-fluid rounded-lg opacity-50 cursor-pointer" alt="thumb"></div>
+                        <div class="col-3 p-1"><div class="bg-light w-100 h-100 d-flex align-items-center justify-content-center rounded-lg text-muted"><i class="fas fa-plus"></i></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-lg-6 px-lg-5 reveal">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <span id="petTypeBadge" class="badge badge-pill badge-success px-3 py-2" style="font-size: 0.8rem;">CAT</span>
+                    <button class="btn btn-link p-0"><i class="far fa-heart fa-2x text-accent"></i></button>
+                </div>
+                <h1 id="petName" class="display-4 mb-3">Luna</h1>
+                <p id="petBreed" class="text-muted lead mb-4">Persian • 2 Years Old</p>
+                
+                <div class="price-tag mb-5" style="font-size: 2.5rem;">Adoption Pledge</div>
+
+                <div class="row mb-5">
+                    <div class="col-4">
+                        <div class="spec-item">
+                            <i class="fas fa-venus-mars text-accent mb-2"></i>
+                            <div class="small text-muted">Gender</div>
+                            <div class="font-weight-bold">Female</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="spec-item">
+                            <i class="fas fa-weight-hanging text-accent mb-2"></i>
+                            <div class="small text-muted">Weight</div>
+                            <div class="font-weight-bold">4.2 kg</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="spec-item">
+                            <i class="fas fa-heartbeat text-accent mb-2"></i>
+                            <div class="small text-muted">Health</div>
+                            <div class="font-weight-bold">Perfect</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <h5 class="mb-3">Personality & Traits</h5>
+                    <div class="personality-tag"><i class="fas fa-check-circle mr-2 text-accent"></i>Lap Cat</div>
+                    <div class="personality-tag"><i class="fas fa-check-circle mr-2 text-accent"></i>Good with Kids</div>
+                    <div class="personality-tag"><i class="fas fa-check-circle mr-2 text-accent"></i>Low Energy</div>
+                    <div class="personality-tag"><i class="fas fa-check-circle mr-2 text-accent"></i>Vaccinated</div>
+                </div>
+
+                <div class="mb-5">
+                    <h5 class="mb-3">Her Story</h5>
+                    <p id="petStory" class="text-muted">Luna was rescued from a quiet neighborhood where she had been wandering. She is incredibly gentle and is looking for a home where she can be the center of attention and get all the cuddles she deserves.</p>
+                </div>
+
+                <a href="Adoption.html" class="btn btn-market btn-market-primary btn-lg w-100 py-4" style="font-size: 1.25rem;">
+                    <i class="fas fa-hand-holding-heart mr-3"></i> Start Adoption Application
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Detail End -->
+
+    <!-- Suggested Start -->
+    <div class="container-fluid bg-white py-5 section-padding">
+        <div class="container py-5">
+            <h2 class="text-center mb-5">You Might Also <span class="text-accent">Love</span></h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3">
+                        <img src="img/cats/cat 2.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Oliver</h5>
+                        <p class="text-muted small m-0">Maine Coon</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card-market p-3">
+                        <img src="img/dogs/dog 3.webp" class="img-fluid rounded-lg mb-3" alt="sim">
+                        <h5 class="m-0">Bella</h5>
+                        <p class="text-muted small m-0">Labrador</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Suggested End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-white pt-5 mt-5 border-top">
+        <div class="container py-5 text-center">
+            <p class="m-0 text-muted">&copy; 2026 <a class="text-primary font-weight-bold text-decoration-none" href="#">Adoptito Marketplace</a>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Load Pet Data from LocalStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            const petData = JSON.parse(localStorage.getItem('selectedPet'));
+            if(petData) {
+                document.getElementById('petName').textContent = petData.name;
+                document.getElementById('petBreed').textContent = `${petData.breed} • ${petData.age}`;
+                document.getElementById('petStory').textContent = petData.description;
+                document.getElementById('petTypeBadge').textContent = petData.type.toUpperCase();
+                
+                // Selection of image based on type for demo purposes
+                if(petData.type.toLowerCase() === 'dog') {
+                    document.getElementById('petMainImage').src = 'img/dogs/dog 1.webp';
+                } else if(petData.type.toLowerCase() === 'cat') {
+                     document.getElementById('petMainImage').src = 'img/cats/cat 1.webp';
+                } else {
+                     document.getElementById('petMainImage').src = 'img/Others/pet 1.webp';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

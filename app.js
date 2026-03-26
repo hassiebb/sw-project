@@ -29,41 +29,20 @@ app.use(express.static(__dirname));
 const connectionString =
   "server=DESKTOP-BPQEBVP;Database=pet_adoption;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}";
 
-// Your SQL query logic goes here...
-app.post("/submit", (req, res) => {
-  const { name, email, address, petName, reason, petType } = req.body;
+// Handle Adoption Applications
+app.post("/adoption", (req, res) => {
+  const { first_name, last_name, email, home_type, pet_name, animal_type } = req.body;
+  const fullName = `${first_name} ${last_name}`;
 
-  var query;
-  // SQL query to insert data into the 'pets' table
-  switch (petType) {
-    case "Cat":
-      query = `insert into adoption (name,address,petName,email,reason) 
-        values ('${name}','${address}','${petName}','${email}','${reason}');
-        `;
-      break;
-
-    case "Dog":
-      query = `insert into dogAdoption (name,address,petName,email,reason) 
-        values ('${name}','${address}','${petName}','${email}','${reason}');
-        `;
-      break;
-    case "Others":
-      query = `insert into othersAdoption (name,address,petName,email,reason) 
-        values ('${name}','${address}','${petName}','${email}','${reason}');
-        `;
-      break;
-
-    default:
-      break;
-  }
+  // Use a unified adoption table for a cleaner schema
+  const query = `INSERT INTO adoption (name, email, petName, reason) 
+                 VALUES ('${fullName}', '${email}', '${pet_name}', '${home_type}');`;
 
   sql.query(connectionString, query, (err, result) => {
     if (err) {
       console.error(err);
       res.status(500).send("Internal Server Error");
     } else {
-      //console.log("Data inserted successfully.");
-      // res.status(200).send("Data inserted successfully!!");
       res.sendFile(path.join(__dirname, "index.html"));
     }
   });
@@ -76,7 +55,7 @@ app.post("/login", (req, res) => {
   isValidUser(signInEmail, signInPassword)
     .then((userExists) => {
       if (userExists) {
-        // User exists, redirect to cats.html
+        // User exists, redirect to home
         res.sendFile(path.join(__dirname, "index.html"));
       } else {
         // User not found, send an error message

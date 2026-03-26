@@ -2,344 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Adoptito</title>
+    <title>Services | Adoptito</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-    <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/market.css" rel="stylesheet">
 </head>
-<body>
+
+<body class="bg-light">
     <!-- Navbar Start -->
-    <header class="container-fluid">
-        <div class="row py-3 px-lg-5">
-          <div class="col-lg-4 d-flex align-items-center">            <!-- Logo -->
-            <a href="index.html" class="navbar-brand d-none d-lg-block">
-              <h1 class="m-0 display-5 text-capitalize">
-                <i class="fas fa-paw text-primary"></i>
-                <span class="text-primary">Adopt</span>ito
-              </h1>
-            </a>
-          </div>
-          <div class="col-lg-8 text-center text-lg-right">
-            <div class="container-fluid p-0">
-              <!-- Navigation -->
-              <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5">
-                <button
-                  type="button"
-                  class="navbar-toggler"
-                  data-toggle="collapse"
-                  data-target="#navbarCollapse"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                  class="collapse navbar-collapse justify-content-center px-3"
-                  id="navbarCollapse"
-                >
-                  <ul class="navbar-nav ml-auto py-0">
-                    <li class="nav-item">
-                      <a href="index.html" class="nav-link text-dark">
-                        <i class="fas fa-home"></i> Home
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="about.html" class="nav-link text-dark">
-                        <i class="fas fa-info-circle"></i> About
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="service.html" class="nav-link text-dark active">
-                        <i class="fas fa-paw"></i> Service
-                      </a>
-                    </li>
-                    <!-- dropdown menu pets -->
-                    <li class="nav-item dropdown">
-                      <a
-                        href="#"
-                        class="nav-link dropdown-toggle text-dark"
-                        data-toggle="dropdown"
-                        ><i class="fas fa-paw"></i> Pets</a
-                      >
-                      <div class="dropdown-menu rounded-0 m-0">
-                        <a href="cats.html" class="dropdown-item">
-                          <i class="fas fa-cat"></i> Cats
-                        </a>
-                        <a href="dogs.html" class="dropdown-item">
-                          <i class="fas fa-dog"></i> Dogs
-                        </a>
-                        <a href="others.html" class="dropdown-item">
-                          <i class="fas fa-paw"></i> Others
-                        </a>
-                      </div>
-                    </li>
-                    <!-- dropdown menu pets -->
-                    <li class="nav-item">
-                      <a href="contact.html" class="nav-link text-dark">
-                        <i class="fas fa-envelope"></i> Contact
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="sign up.html" class="nav-link text-dark">
-                          <i class="fas fa-user-plus"></i> Sign Up
-                      </a>
-                  </li>
-                  </ul>
-                </div>
-              </nav>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-market px-lg-5">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 text-primary"><i class="fas fa-paw mr-2"></i>Adopt<span class="text-accent">ito</span></h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="pets.html" class="nav-item nav-link">Marketplace</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-          </div>
+            <div class="d-flex align-items-center">
+                <a href="sign in.html" class="btn btn-market btn-market-outline mr-3">Sign In</a>
+                <a href="sign up.html" class="btn btn-market btn-market-primary">Register</a>
+            </div>
         </div>
-      </header>
+    </nav>
     <!-- Navbar End -->
 
-    <!-- Services Start -->
-    <div class="container-fluid bg-light pt-5">
-      <div class="container py-5">
-        <div class="d-flex flex-column text-center mb-5">
-          <h4 class="text-secondary mb-3">Our Services</h4>
-          <h1 class="display-4 m-0"><span class="text-primary"><i class="fas fa-paw"></i> Premium</span> Pet Services</h1>
+    <div class="container-fluid page-header py-5 mb-5" style="margin-top: 80px;">
+        <div class="container py-5 text-center">
+            <h1 class="display-3 text-white mb-3">Premium Services</h1>
+            <p class="text-white-50 lead">Going beyond adoption to ensure a lifetime of happiness.</p>
         </div>
-        <div class="row pb-3">
-          <div class="card-deck">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card bg-white border-0 rounded-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-home fa-3x text-primary mb-3"></i>
-                  <h3 class="mb-3">Temporary Shelter</h3>
-                  <p>Shelters offer a safe and temporary home for animals until they find a permanent family. They ensure animals have shelter, food, and medical attention during their stay.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card bg-white border-0 rounded-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-medkit fa-3x text-danger mb-3"></i>
-                  <h3 class="mb-3">Rescue and Rehabilitation</h3>
-                  <p>Shelters rescue animals from various situations, including abandonment, abuse, or neglect. They provide medical care, rehabilitation, and socialization to prepare animals for adoption.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card bg-white border-0 rounded-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-heartbeat fa-3x text-success mb-3"></i>
-                  <h3 class="mb-3">Healthcare</h3>
-                  <p>Adoption shelters provide veterinary care, vaccinations, spaying, neutering, and microchipping services to ensure the health and well-being of animals.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card bg-white border-0 rounded-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-users fa-3x text-info mb-3"></i>
-                  <h3 class="mb-3">Behavioral Training</h3>
-                  <p>Shelters assess the behavior and temperament of animals to match them with suitable adoptive families. They also provide basic training and socialization to make pets more adaptable to their new homes.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card bg-white border-0 rounded-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-hand-holding-heart fa-3x text-warning mb-3"></i>
-                  <h3 class="mb-3">Adoption Counseling</h3>
-                  <p>Shelter staff and volunteers assist potential adopters in finding a pet that matches their lifestyle, preferences, and capabilities.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card bg-white border-0 rounded-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-search fa-3x text-primary mb-3"></i>
-                  <h3 class="mb-3">Lost and Found Services</h3>
-                  <p>Shelters help reunite lost pets with their owners by providing a platform for reporting lost animals and matching them with found pets.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <!-- Services End -->
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid bg-light my-5 p-0 py-5">
-        <div class="container p-0 py-5">
-            <div class="d-flex flex-column text-center mb-5">
-                <h4 class="text-secondary mb-3">Testimonial</h4>
-                <h1 class="display-4 m-0">Our Client <span class="text-primary">Says</span></h1>
+    <div class="container section-padding">
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-lg-4 col-md-6 mb-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm h-100 text-center border-bottom border-accent border-top-0 border-left-0 border-right-0" style="border-width: 4px !important;">
+                    <i class="fas fa-home fa-3x text-accent mb-4"></i>
+                    <h3 class="mb-3">Boutique Shelters</h3>
+                    <p class="text-muted">A five-star temporary home featuring climate control, social areas, and organic nutrition for every resident.</p>
+                </div>
             </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Max</h5>
-                            <i>Adoptor</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+            <!-- Service 2 -->
+            <div class="col-lg-4 col-md-6 mb-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm h-100 text-center border-bottom border-accent border-top-0 border-left-0 border-right-0" style="border-width: 4px !important;">
+                    <i class="fas fa-heartbeat fa-3x text-accent mb-4"></i>
+                    <h3 class="mb-3">Luxe Healthcare</h3>
+                    <p class="text-muted">Comprehensive medical checkups, genetic testing, and personalized wellness plans from our world-class vets.</p>
                 </div>
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Jack</h5>
-                            <i>Adoptor</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="col-lg-4 col-md-6 mb-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm h-100 text-center border-bottom border-accent border-top-0 border-left-0 border-right-0" style="border-width: 4px !important;">
+                    <i class="fas fa-graduation-cap fa-3x text-accent mb-4"></i>
+                    <h3 class="mb-3">Behavior Academy</h3>
+                    <p class="text-muted">Customized training programs to ensure your new family member integrates perfectly into your lifestyle.</p>
                 </div>
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Robert</h5>
-                            <i>Adoptor</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="col-lg-4 col-md-6 mb-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm h-100 text-center border-bottom border-accent border-top-0 border-left-0 border-right-0" style="border-width: 4px !important;">
+                    <i class="fas fa-utensils fa-3x text-accent mb-4"></i>
+                    <h3 class="mb-3">Nutrition Center</h3>
+                    <p class="text-muted">Gourmet meal plans and specialized diets tailored to the unique health needs of your adopted pet.</p>
                 </div>
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Mr White</h5>
-                            <i>Adoptor</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+            </div>
+            <!-- Service 5 -->
+            <div class="col-lg-4 col-md-6 mb-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm h-100 text-center border-bottom border-accent border-top-0 border-left-0 border-right-0" style="border-width: 4px !important;">
+                    <i class="fas fa-spa fa-3x text-accent mb-4"></i>
+                    <h3 class="mb-3">Grooming Spa</h3>
+                    <p class="text-muted">Premium grooming services to keep your pet healthy, happy, and looking their absolute best.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm h-100 text-center border-bottom border-accent border-top-0 border-left-0 border-right-0" style="border-width: 4px !important;">
+                    <i class="fas fa-shuttle-van fa-3x text-accent mb-4"></i>
+                    <h3 class="mb-3">Safe Transport</h3>
+                    <p class="text-muted">First-class relocation services to bring your new family member safely to your doorstep, anywhere in the world.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
 
     <!-- Footer Start -->
-    <footer class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-      <div class="row pt-5">
-        <div class="col-lg-4 col-md-12 mb-5">
-          <h1 class="mb-3 display-5 text-capitalize text-white">
-            <span class="text-primary">Adopt</span>ito
-          </h1>
-          <p class="m-0">
-            A humble yet significant website that serves as the foundation of
-            our online presence. As you scroll down our pet adoption website,
-            you'll find this unassuming space brimming with essential
-            information, connecting us with our valued users and supporters.
-          </p>
-        </div>
-        <div class="col-lg-8 col-md-12">
-          <div class="row">
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Get In Touch</h5>
-              <p>
-                <i class="fa fa-map-marker-alt mr-2"></i> Mokattam, Cairo, Egypt
-              </p>
-              <p><i class="fa fa-phone-alt mr-2"></i> +01154496852</p>
-              <p><i class="fa fa-envelope mr-2"></i> Adoptito@Gmail.com</p>
-              <div class="d-flex justify-content-start mt-4">
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Popular Links</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="index.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Home</a
-                >
-                <a class="text-white mb-2" href="about.html"
-                  ><i class="fa fa-angle-right mr-2"></i> About Us</a
-                >
-                <a class="text-white mb-2" href="service.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Our Services</a
-                >
-                <a class="text-white mb-2" href="dogs.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Pets For Adoption</a
-                >
-                <a class="text-white" href="contact.html"
-                    ><i class="fa fa-angle-right mr-2"></i> Contact Us</a
-                  >
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Helpful Links</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="donate.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Donate</a
-                >
-                <a class="text-white mb-2" href="volunteer.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Volunteer</a
-                >
-                <a class="text-white mb-2" href="events.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Events</a
-                >
-                <a class="text-white mb-2" href="blog.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Blog</a
-                >
-                <a class="text-white" href="faq.html"
-                  ><i class="fa fa-angle-right mr-2"></i> FAQ</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <footer class="bg-white pt-5 mt-5 border-top text-center py-4">
+        <p class="m-0 text-muted">&copy; 2026 Adoptito Marketplace. A legacy of care.</p>
     </footer>
-    <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 </html>

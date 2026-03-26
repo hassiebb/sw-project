@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Marketplace | Adoptito</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 4 (Core Structure) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Marketplace Styles -->
+    <link href="css/market.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-market px-lg-5">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 text-primary"><i class="fas fa-paw mr-2"></i>Adopt<span class="text-accent">ito</span></h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="pets.html" class="nav-item nav-link active">Marketplace</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="sign in.html" class="btn btn-market btn-market-outline mr-3">Sign In</a>
+                <a href="sign up.html" class="btn btn-market btn-market-primary">Register</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5" style="margin-top: 80px;">
+        <div class="container py-5 text-center">
+            <h1 class="display-3 text-white mb-3">Our Marketplace</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center bg-transparent mb-0">
+                    <li class="breadcrumb-item"><a class="text-white text-decoration-none" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-white-50 active" aria-current="page">Marketplace</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Marketplace Main Start -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3 mb-5">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h4 class="mb-4 d-flex justify-content-between align-items-center">
+                        Filters <i class="fas fa-sliders-h small text-accent"></i>
+                    </h4>
+                    
+                    <!-- Species Filter -->
+                    <div class="mb-5">
+                        <h6 class="text-uppercase font-weight-bold mb-3">Species</h6>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="type-dogs" checked>
+                            <label class="custom-control-label" for="type-dogs">Dogs</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="type-cats" checked>
+                            <label class="custom-control-label" for="type-cats">Cats</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="type-others">
+                            <label class="custom-control-label" for="type-others">Others</label>
+                        </div>
+                    </div>
+
+                    <!-- Age Filter -->
+                    <div class="mb-5">
+                        <h6 class="text-uppercase font-weight-bold mb-3">Age Group</h6>
+                        <div class="custom-control custom-radio mb-2">
+                            <input type="radio" name="age" class="custom-control-input" id="age-baby">
+                            <label class="custom-control-label" for="age-baby">Baby (0-1y)</label>
+                        </div>
+                        <div class="custom-control custom-radio mb-2">
+                            <input type="radio" name="age" class="custom-control-input" id="age-young" checked>
+                            <label class="custom-control-label" for="age-young">Young (1-3y)</label>
+                        </div>
+                        <div class="custom-control custom-radio mb-2">
+                            <input type="radio" name="age" class="custom-control-input" id="age-adult">
+                            <label class="custom-control-label" for="age-adult">Adult (3y+)</label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-market btn-market-primary w-100">Apply Filters</button>
+                    <button class="btn btn-link w-100 mt-2 text-muted small">Clear All</button>
+                </div>
+            </div>
+
+            <!-- Pet Listings -->
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                    <p class="m-0 text-muted">Showing <b>14</b> results found</p>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-3 small text-muted">Sort By:</span>
+                        <select class="custom-select border-0 shadow-sm" style="width: 150px; border-radius: 15px;">
+                            <option selected>Newest</option>
+                            <option>Age: Low to High</option>
+                            <option>Age: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row" id="petMarketGrid">
+                    <!-- Dog 1 -->
+                    <div class="col-md-6 mb-5">
+                        <div class="card-market pet-detail-link" data-name="Max" data-type="Dog" data-age="2 Years" data-breed="Husky" data-desc="Max is a high-energy Husky who loves running and wide open spaces.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 2.webp" alt="Max">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Max</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Siberian Husky • 2 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cat 1 -->
+                    <div class="col-md-6 mb-5">
+                        <div class="card-market pet-detail-link" data-name="Olive" data-type="Cat" data-age="1 Year" data-breed="Siamese" data-desc="Olive is a chatty Siamese cat who loves to be the center of attention.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Cat</span>
+                                <img src="img/cats/cat 3.webp" alt="Olive">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Olive</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Siamese • 1 Year</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dog 2 -->
+                    <div class="col-md-6 mb-5">
+                        <div class="card-market pet-detail-link" data-name="Bailey" data-type="Dog" data-age="3 Years" data-breed="Golden Retriever" data-desc="Bailey is a calm, well-trained dog who is perfect for families with children.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Dog</span>
+                                <img src="img/dogs/dog 3.webp" alt="Bailey">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Bailey</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Retriever • 3 Years</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Others 1 -->
+                    <div class="col-md-6 mb-5">
+                        <div class="card-market pet-detail-link" data-name="Steffan" data-type="Hamster" data-age="2 Months" data-breed="Syrian" data-desc="Steffan is a small, quiet hamster who enjoys a steady supply of treats and exercise.">
+                            <div class="img-wrapper">
+                                <span class="badge-type">Others</span>
+                                <img src="img/Others/pet 3.webp" alt="Steffan">
+                            </div>
+                            <div class="card-market-body">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h3 class="pet-name">Steffan</h3>
+                                    <button class="btn btn-link p-0 love-btn"><i class="far fa-heart fa-lg text-accent"></i></button>
+                                </div>
+                                <p class="text-muted small">Syrian Hamster • 2 Months</p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Adopt Me</span>
+                                    <button class="btn btn-market btn-market-primary btn-sm">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Marketplace Main End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-white pt-5 mt-5 border-top">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <h1 class="m-0 text-primary mb-4"><i class="fas fa-paw mr-2"></i>Adopt<span class="text-accent">ito</span></h1>
+                    <p class="text-muted">The leading premium pet adoption marketplace. We bridge the gap between loving families and furry friends in need of a forever home.</p>
+                </div>
+                <!-- ... similar footer as index.html ... -->
+            </div>
+        </div>
+        <div class="container-fluid bg-primary text-white py-4">
+            <div class="container text-center">
+                <p class="m-0 text-white-50">&copy; 2026 <a class="text-white border-bottom text-decoration-none" href="#">Adoptito Marketplace</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

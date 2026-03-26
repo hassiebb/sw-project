@@ -1,130 +1,78 @@
 (function ($) {
-  "use strict";
+    "use strict";
 
-  // Dropdown on mouse hover
-  $(document).ready(function () {
-    function toggleNavbarMethod() {
-      if ($(window).width() > 992) {
-        $(".navbar .dropdown")
-          .on("mouseover", function () {
-            $(".dropdown-toggle", this).trigger("click");
-          })
-          .on("mouseout", function () {
-            $(".dropdown-toggle", this).trigger("click").blur();
-          });
-      } else {
-        $(".navbar .dropdown").off("mouseover").off("mouseout");
-      }
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.navbar-market').addClass('shadow-sm').css('background', 'rgba(255, 255, 255, 0.95)');
+        } else {
+            $('.navbar-market').removeClass('shadow-sm').css('background', 'rgba(255, 255, 255, 0.85)');
+        }
+    });
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'swing');
+        return false;
+    });
+
+    // Reveal Animations
+    const reveal = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        for (let i = 0; i < reveals.length; i++) {
+            const windowHeight = window.innerHeight;
+            const elementTop = reveals[i].getBoundingClientRect().top;
+            const elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active');
+            }
+        }
+    };
+    window.addEventListener('scroll', reveal);
+    reveal(); // Initial check
+
+    // Marketplace Interaction: Store Selected Pet
+    $(document).on('click', '.pet-detail-link', function(e) {
+        // Prevent clicking if it's the heart button
+        if($(e.target).closest('.love-btn').length) return;
+
+        const petData = {
+            name: $(this).data('name'),
+            type: $(this).data('type'),
+            age: $(this).data('age'),
+            breed: $(this).data('breed'),
+            description: $(this).data('desc')
+        };
+        
+        localStorage.setItem('selectedPet', JSON.stringify(petData));
+        window.location.href = 'pet-details.html';
+    });
+
+    // Favorite/Love Toggle
+    $(document).on('click', '.love-btn', function(e) {
+        e.preventDefault();
+        const icon = $(this).find('i');
+        icon.toggleClass('far fas').toggleClass('text-accent text-danger');
+        
+        // Simple animation feedback
+        $(this).css('transform', 'scale(1.3)');
+        setTimeout(() => $(this).css('transform', 'scale(1)'), 200);
+    });
+
+    // Adoption Form Persistence
+    if(window.location.pathname.includes('Adoption.html')) {
+        const selectedPet = JSON.parse(localStorage.getItem('selectedPet'));
+        if(selectedPet) {
+            $('#pet_name').val(selectedPet.name);
+            $('#animal_type').val(selectedPet.type);
+        }
     }
-    toggleNavbarMethod();
-    $(window).resize(toggleNavbarMethod);
-  });
 
-  // Back to top button
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $(".back-to-top").fadeIn("slow");
-    } else {
-      $(".back-to-top").fadeOut("slow");
-    }
-  });
-  $(".back-to-top").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
-    return false;
-  });
-
-  // Date and time picker
-  $("#date").datetimepicker({
-    format: "L",
-  });
-  $("#time").datetimepicker({
-    format: "LT",
-  });
-
-  // Testimonials carousel
-  $(".testimonial-carousel").owlCarousel({
-    center: true,
-    autoplay: true,
-    smartSpeed: 2000,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      576: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 3,
-      },
-    },
-  });
 })(jQuery);
-
-// Function to handle form submission
-function submitForm(event) {
-  event.preventDefault(); // Prevent form from submitting
-
-  // Get form values
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  var confirmPassword = document.getElementById("confirmPassword").value;
-
-  // Perform form validation
-  if (
-    name === "" ||
-    email === "" ||
-    password === "" ||
-    confirmPassword === ""
-  ) {
-    alert("Please fill in all fields");
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    alert("Passwords do not match");
-    return;
-  }
-
-  // Form submission logic goes here
-  // You can send the form data to a server or perform any other action
-
-  // Clear form fields
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("password").value = "";
-  document.getElementById("confirmPassword").value = "";
-
-  alert("Form submitted successfully!");
-}
-
-// Add event listener to the form submit button
-document.getElementById("signupButton").addEventListener("click", submitForm);
-
-//NEW STUFFF!!!!!
-
-// Check login status on page load
-$(document).ready(() => {
-  $.get("/check-login", (data) => {
-    const username = data.username;
-    updateNavigationBar(username);
-  });
-});
-
-// Function to update navigation bar
-function updateNavigationBar(username) {
-  const signupButton = $("#signupButton");
-
-  if (username) {
-    // User is logged in, show welcome message
-    signupButton.text(`Welcome, ${username}`);
-  } else {
-    // User is not logged in, show the Sign Up button
-    signupButton.html('<i class="fas fa-user-plus"></i> Sign Up');
-  }
-}

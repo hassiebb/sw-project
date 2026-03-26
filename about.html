@@ -1,416 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>Adoptito</title>
+    <title>About Us | Adoptito</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/market.css" rel="stylesheet">
 </head>
 
 <body>
-
     <!-- Navbar Start -->
-    <header class="container-fluid">
-      <div class="row py-3 px-lg-5">
-        <div class="col-lg-4 d-flex align-items-center">          <!-- Logo -->
-          <a href="index.html" class="navbar-brand d-none d-lg-block">
-            <h1 class="m-0 display-5 text-capitalize">
-              <i class="fas fa-paw text-primary"></i>
-              <span class="text-primary">Adopt</span>ito
-            </h1>
-          </a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-market px-lg-5">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 text-primary"><i class="fas fa-paw mr-2"></i>Adopt<span class="text-accent">ito</span></h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="pets.html" class="nav-item nav-link">Marketplace</a>
+                <a href="about.html" class="nav-item nav-link active">About Us</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="sign in.html" class="btn btn-market btn-market-outline mr-3">Sign In</a>
+                <a href="sign up.html" class="btn btn-market btn-market-primary">Register</a>
+            </div>
         </div>
-        <div class="col-lg-8 text-center text-lg-right">
-          <div class="container-fluid p-0">
-            <!-- Navigation -->
-            <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5">
-              <button
-                type="button"
-                class="navbar-toggler"
-                data-toggle="collapse"
-                data-target="#navbarCollapse"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div
-                class="collapse navbar-collapse justify-content-center px-3"
-                id="navbarCollapse"
-              >
-                <ul class="navbar-nav ml-auto py-0">
-                  <li class="nav-item">
-                    <a href="index.html" class="nav-link text-dark">
-                      <i class="fas fa-home"></i> Home
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="about.html" class="nav-link text-dark active">
-                      <i class="fas fa-info-circle"></i> About
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="service.html" class="nav-link text-dark">
-                      <i class="fas fa-paw"></i> Service
-                    </a>
-                  </li>
-                  <!-- dropdown menu pets -->
-                  <li class="nav-item dropdown">
-                    <a
-                      href="#"
-                      class="nav-link dropdown-toggle text-dark"
-                      data-toggle="dropdown"
-                      ><i class="fas fa-paw"></i> Pets</a
-                    >
-                    <div class="dropdown-menu rounded-0 m-0">
-                      <a href="cats.html" class="dropdown-item">
-                        <i class="fas fa-cat"></i> Cats
-                      </a>
-                      <a href="dogs.html" class="dropdown-item">
-                        <i class="fas fa-dog"></i> Dogs
-                      </a>
-                      <a href="others.html" class="dropdown-item">
-                        <i class="fas fa-paw"></i> Others
-                      </a>
-                    </div>
-                  </li>
-                  <!-- dropdown menu pets -->
-                  <li class="nav-item">
-                    <a href="contact.html" class="nav-link text-dark">
-                      <i class="fas fa-envelope"></i> Contact
-                    </a>
-                  </li>
-                <li class="nav-item">
-                      <a href="sign up.html" class="nav-link text-dark">
-                          <i class="fas fa-user-plus"></i> Sign Up
-                      </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container-fluid page-header py-5 mb-5" style="margin-top: 80px;">
+        <div class="container py-5 text-center">
+            <h1 class="display-3 text-white mb-3">Our Mission</h1>
+            <p class="text-white-50 lead">Committed to connecting hearts and paws since 2026.</p>
         </div>
-      </div>
-    </header>
-      <!-- Navbar End -->
-
-
-    <!-- About Start -->
-    <div class="container py-5">
-      <div class="row py-5">
-          <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
-              <h4 class="text-secondary mb-3"><i class="fas fa-info-circle"></i> About Us</h4>
-              <h1 class="display-4 mb-4"><span class="text-primary">Adoption</span>  <span class="text-secondary">Staff</span></h1>
-              <h5 class="text-muted mb-3">Welcome to Adoptito, 
-                  where love finds its way into every furry heart! Established with a deep passion for animals, 
-                  our adoption center is dedicated to providing a loving and permanent home for every pet in need.
-              </h5>
-              <p class="mb-4">At Adoptito, 
-                  we believe that every animal deserves a second chance at happiness. 
-                  Our mission is to rescue, rehabilitate, and rehome abandoned and mistreated pets, 
-                  giving them the love and care they deserve. With a team of dedicated staff and volunteers, 
-                  we work tirelessly to ensure that our furry friends receive the best possible care and attention.</p>
-              <ul class="list-inline">
-                  <li><h5><i class="fas fa-check-circle text-primary mr-3"></i>Best In Industry</h5></li>
-                  <li><h5><i class="fas fa-check-circle text-primary mr-3"></i>Emergency Services</h5></li>
-                  <li><h5><i class="fas fa-check-circle text-primary mr-3"></i>24/7 Customer Support</h5></li>
-                  <li><h5><i class="fas fa-check-circle text-primary mr-3"></i>Adoption Events</h5></li>
-                  <li><h5><i class="fas fa-check-circle text-primary mr-3"></i>Training Programs</h5></li>
-              </ul>
-          </div>
-          <div class="col-lg-5">
-              <div class="row px-3">
-                  <div class="col-12 p-0">
-                      <img class="img-fluid w-100" src="img/about-1.jpg" alt="">
-                  </div>
-                  <div class="col-6 p-0">
-                      <img class="img-fluid w-100" src="img/about-2.jpg" alt="">
-                  </div>
-                  <div class="col-6 p-0">
-                      <img class="img-fluid w-100" src="img/about-3.jpg" alt="">
-                  </div>
-              </div>
-          </div>
-      </div>
     </div>
-    <!-- About End -->
 
-
-    <!-- Features Start -->
-    <div class="container">
+    <div class="container section-padding">
         <div class="row align-items-center">
-            <div class="col-lg-5">
-                <img class="img-fluid w-100" src="img/feature.jpg" alt="">
+            <div class="col-lg-6 mb-5 reveal">
+                <img src="img/about-1.jpg" class="img-fluid rounded-lg shadow-md" alt="About">
             </div>
-            <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary mb-3">Why Choose Us?</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Special Care</span> On Pets</h1>
-                <p class="mb-4">At Adoptito, we understand the significance of this choice, and we stand apart as a beacon of hope, love, and unwavering dedication. Here's why choosing us is not just a decision but a heartfelt commitment to a better world for animals.</p>
-                <div class="row py-2">
-                    <div class="col-6">
-                        <div class="d-flex align-items-center mb-4">
-                            <h1 class="flaticon-cat font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Best In Industry</h5>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center mb-4">
-                            <h1 class="flaticon-doctor font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Emergency Services</h5>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center">
-                            <h1 class="flaticon-care font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Special Care</h5>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center">
-                            <h1 class="flaticon-dog font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Customer Support</h5>
-                        </div>
-                    </div>
+            <div class="col-lg-6 px-lg-5 reveal">
+                <h4 class="text-accent font-weight-bold mb-3">Our Legacy</h4>
+                <h1 class="display-4 mb-4">A Global <span class="text-primary">Standard</span> for Adoption</h1>
+                <p class="text-muted lead mb-4">Adoptito was founded on a simple principle: every pet is a masterpiece of nature that deserves a premium home. We've moved beyond traditional sheltering to create a boutique experience that honors the bond between humans and animals.</p>
+                
+                <div class="row pt-2">
+                    <div class="col-sm-6 mb-3"><h5 class="font-weight-bold"><i class="fas fa-check-circle text-accent mr-2"></i> 5k+ Successful Adoptions</h5></div>
+                    <div class="col-sm-6 mb-3"><h5 class="font-weight-bold"><i class="fas fa-check-circle text-accent mr-2"></i> Global Vet Network</h5></div>
+                    <div class="col-sm-6 mb-3"><h5 class="font-weight-bold"><i class="fas fa-check-circle text-accent mr-2"></i> 24/7 Support</h5></div>
+                    <div class="col-sm-6 mb-3"><h5 class="font-weight-bold"><i class="fas fa-check-circle text-accent mr-2"></i> Ethical Standards</h5></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Features End -->
 
-
-    <!-- Team Start -->
-    <div class="container mt-5 pt-5 pb-3">
-        <div class="d-flex flex-column text-center mb-5">
-            <h4 class="text-secondary mb-3">Team Member</h4>
-            <h1 class="display-4 m-0">Meet Our <span class="text-primary">Team Member</span></h1>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="img/mezo.jpg" alt="" >
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Moutaz Soliman</h5>
-                            <i></i>
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+    <!-- Stats Start -->
+    <div class="container-fluid bg-white py-5 reveal">
+        <div class="container py-5">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <h1 class="display-4 font-weight-bold text-primary">12k</h1>
+                    <p class="text-muted text-uppercase mb-0">Pets Saved</p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="img/zeka.jpeg" alt="" height="273">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Mohamed Zakaria</h5>
-                            <i></i>
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h1 class="display-4 font-weight-bold text-primary">98%</h1>
+                    <p class="text-muted text-uppercase mb-0">Happy Families</p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="img/hassieb.jpg" alt="">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Mohamed Hassieb</h5>
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h1 class="display-4 font-weight-bold text-primary">20+</h1>
+                    <p class="text-muted text-uppercase mb-0">Global Centers</p>
                 </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="img/abdalrahman.jpg" alt="">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Abdalrahman Ebrahim</h5>
-                           
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="img/Mahmoud.jpg" alt="">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Mahmoud Mohamed</h5>
-                           
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h1 class="display-4 font-weight-bold text-primary">150+</h1>
+                    <p class="text-muted text-uppercase mb-0">Certified Vets</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
-
 
     <!-- Footer Start -->
-    <footer class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-      <div class="row pt-5">
-        <div class="col-lg-4 col-md-12 mb-5">
-          <h1 class="mb-3 display-5 text-capitalize text-white">
-            <span class="text-primary">Adopt</span>ito
-          </h1>
-          <p class="m-0">
-            A humble yet significant website that serves as the foundation of
-            our online presence. As you scroll down our pet adoption website,
-            you'll find this unassuming space brimming with essential
-            information, connecting us with our valued users and supporters.
-          </p>
+    <footer class="bg-white pt-5 mt-5 border-top">
+        <div class="container py-4 text-center">
+            <p class="m-0 text-muted">&copy; 2026 Adoptito Marketplace. Built for a better world.</p>
         </div>
-        <div class="col-lg-8 col-md-12">
-          <div class="row">
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Get In Touch</h5>
-              <p>
-                <i class="fa fa-map-marker-alt mr-2"></i> Mokattam, Cairo, Egypt
-              </p>
-              <p><i class="fa fa-phone-alt mr-2"></i> +01154496852</p>
-              <p><i class="fa fa-envelope mr-2"></i> Adoptito@Gmail.com</p>
-              <div class="d-flex justify-content-start mt-4">
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Popular Links</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="index.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Home</a
-                >
-                <a class="text-white mb-2" href="about.html"
-                  ><i class="fa fa-angle-right mr-2"></i> About Us</a
-                >
-                <a class="text-white mb-2" href="service.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Our Services</a
-                >
-                <a class="text-white mb-2" href="dogs.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Pets For Adoption</a
-                >
-                <a class="text-white" href="contact.html"
-                    ><i class="fa fa-angle-right mr-2"></i> Contact Us</a
-                  >
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Helpful Links</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="donate.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Donate</a
-                >
-                <a class="text-white mb-2" href="volunteer.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Volunteer</a
-                >
-                <a class="text-white mb-2" href="events.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Events</a
-                >
-                <a class="text-white mb-2" href="blog.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Blog</a
-                >
-                <a class="text-white" href="faq.html"
-                  ><i class="fa fa-angle-right mr-2"></i> FAQ</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
-    <!-- Footer End -->
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>

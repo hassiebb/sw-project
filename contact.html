@@ -1,367 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Adoptito</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Free HTML Templates" name="keywords" />
-    <meta content="Free HTML Templates" name="description" />
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us | Adoptito</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/market.css" rel="stylesheet">
+</head>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
-
-    <!-- Google Web Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link
-      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-
-  <body>
+<body class="bg-light">
     <!-- Navbar Start -->
-    <header class="container-fluid">
-      <div class="row py-3 px-lg-5">
-        <div class="col-lg-4 d-flex align-items-center">
-          <!-- Logo -->
-          <a href="index.html" class="navbar-brand d-none d-lg-block">
-            <h1 class="m-0 display-5 text-capitalize">
-              <i class="fas fa-paw text-primary"></i>
-              <span class="text-primary">Adopt</span>ito
-            </h1>
-          </a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-market px-lg-5">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 text-primary"><i class="fas fa-paw mr-2"></i>Adopt<span class="text-accent">ito</span></h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="pets.html" class="nav-item nav-link">Marketplace</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="sign in.html" class="btn btn-market btn-market-outline mr-3">Sign In</a>
+                <a href="sign up.html" class="btn btn-market btn-market-primary">Register</a>
+            </div>
         </div>
-        <div class="col-lg-8 text-center text-lg-right">
-          <div class="container-fluid p-0">
-            <!-- Navigation -->
-            <nav
-              class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5"
-            >
-              <button
-                type="button"
-                class="navbar-toggler"
-                data-toggle="collapse"
-                data-target="#navbarCollapse"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div
-                class="collapse navbar-collapse justify-content-center px-3"
-                id="navbarCollapse"
-              >
-                <ul class="navbar-nav ml-auto py-0">
-                  <li class="nav-item">
-                    <a href="index.html" class="nav-link text-dark">
-                      <i class="fas fa-home"></i> Home
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="about.html" class="nav-link text-dark">
-                      <i class="fas fa-info-circle"></i> About
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="service.html" class="nav-link text-dark">
-                      <i class="fas fa-paw"></i> Service
-                    </a>
-                  </li>
-                  <!-- dropdown menu pets -->
-                  <li class="nav-item dropdown">
-                    <a
-                      href="#"
-                      class="nav-link dropdown-toggle text-dark"
-                      data-toggle="dropdown"
-                      ><i class="fas fa-paw"></i> Pets</a
-                    >
-                    <div class="dropdown-menu rounded-0 m-0">
-                      <a href="cats.html" class="dropdown-item">
-                        <i class="fas fa-cat"></i> Cats
-                      </a>
-                      <a href="dogs.html" class="dropdown-item">
-                        <i class="fas fa-dog"></i> Dogs
-                      </a>
-                      <a href="others.html" class="dropdown-item">
-                        <i class="fas fa-paw"></i> Others
-                      </a>
-                    </div>
-                  </li>
-                  <!-- dropdown menu pets -->
-                  <li class="nav-item">
-                    <a href="contact.html" class="nav-link text-dark active">
-                      <i class="fas fa-envelope"></i> Contact
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="sign up.html" class="nav-link text-dark">
-                      <i class="fas fa-user-plus"></i> Sign Up
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
+    </nav>
     <!-- Navbar End -->
 
-    <!-- Contact Start -->
-    <div class="container-fluid pt-5">
-      <div class="d-flex flex-column text-center mb-5 pt-5">
-        <h4 class="text-secondary mb-3">Contact Us</h4>
-        <h1 class="display-4 m-0">
-          Contact For <span class="text-primary">Any Query</span>
-        </h1>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-sm-8 mb-5">
-          <div class="contact-form">
-            <!-----------------------------------------------FORM STARTS HERE------------------------------->
-            <form action="http://localhost:3000/contact" method="POST">
-              <!-- Name -->
-              <div class="control-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      ><i class="fas fa-user"></i
-                    ></span>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control p-4"
-                    id="name"
-                    name="name"
-                    placeholder="Your Name"
-                    required="required"
-                    data-validation-required-message="Please enter your name"
-                  />
-                </div>
-                <p class="help-block text-danger"></p>
-              </div>
-
-              <!-- Email -->
-              <div class="control-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      ><i class="fas fa-envelope"></i
-                    ></span>
-                  </div>
-                  <input
-                    type="email"
-                    class="form-control p-4"
-                    id="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required="required"
-                    data-validation-required-message="Please enter your email"
-                  />
-                </div>
-                <p class="help-block text-danger"></p>
-              </div>
-
-              <!-- Subject -->
-              <div class="control-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      ><i class="fas fa-heading"></i
-                    ></span>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control p-4"
-                    id="subject"
-                    name="subject"
-                    placeholder="Subject"
-                    required="required"
-                    data-validation-required-message="Please enter a subject"
-                  />
-                </div>
-                <p class="help-block text-danger"></p>
-              </div>
-
-              <!-- message -->
-              <div class="control-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      ><i class="fas fa-comment"></i
-                    ></span>
-                  </div>
-                  <textarea
-                    class="form-control p-4"
-                    rows="6"
-                    id="message"
-                    name="message"
-                    placeholder="Message"
-                    required="required"
-                    data-validation-required-message="Please enter your message"
-                  ></textarea>
-                </div>
-                <p class="help-block text-danger"></p>
-              </div>
-
-              <!-- submit button -->
-              <div>
-                <button class="btn btn-primary py-3 px-5" type="submit">
-                  <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-              </div>
-            </form>
-          </div>
+    <div class="container-fluid page-header py-5 mb-5" style="margin-top: 80px;">
+        <div class="container py-5 text-center">
+            <h1 class="display-3 text-white mb-3">Get in Touch</h1>
+            <p class="text-white-50 lead">We're here to help you start your adoption journey.</p>
         </div>
-        <div class="col-12 mb-n2 p-0">
-          <iframe
-            style="width: 100%; height: 500px"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.0000000000005!2d31.2858!3d30.0103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145838f0f123a5a9%3A0x9b7e3a6c1de18956!2sMTI%20University%2C%20Egypt!5e0!3m2!1sen!2seg!4v1603794290143!5m2!1sen!2seg"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
-        </div>
-      </div>
     </div>
-    <!-- Contact End -->
+
+    <div class="container py-5 section-padding">
+        <div class="row">
+            <div class="col-lg-5 mb-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h4 class="mb-4">Contact Info</h4>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="btn-market-primary rounded-circle d-flex align-items-center justify-content-center mr-3" style="width: 50px; height: 50px;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 font-weight-bold">Our HQ</p>
+                            <p class="text-muted mb-0">Mokattam, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="btn-market-primary rounded-circle d-flex align-items-center justify-content-center mr-3" style="width: 50px; height: 50px;">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 font-weight-bold">Call Us</p>
+                            <p class="text-muted mb-0">+20 115 449 6852</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="btn-market-primary rounded-circle d-flex align-items-center justify-content-center mr-3" style="width: 50px; height: 50px;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 font-weight-bold">Email Us</p>
+                            <p class="text-muted mb-0">hello@adoptito.qa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-7 px-lg-5 reveal">
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h4 class="mb-4">Send a Message</h4>
+                    <form action="http://localhost:3000/contact" method="POST">
+                        <div class="control-group mb-4">
+                            <input type="text" class="form-control rounded-pill py-4 border-light bg-light px-4" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="control-group mb-4">
+                            <input type="email" class="form-control rounded-pill py-4 border-light bg-light px-4" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="control-group mb-4">
+                            <input type="text" class="form-control rounded-pill py-4 border-light bg-light px-4" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="control-group mb-4">
+                            <textarea class="form-control rounded-lg p-4 border-light bg-light" rows="5" name="message" placeholder="How can we help?" required></textarea>
+                        </div>
+                        <button class="btn btn-market btn-market-primary btn-lg w-100 py-3" type="submit">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 reveal">
+            <div class="col-12">
+                <div class="rounded-lg overflow-hidden shadow-sm">
+                    <iframe class="w-100" style="height: 450px; border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.0000000000005!2d31.2858!3d30.0103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145838f0f123a5a9%3A0x9b7e3a6c1de18956!2sMTI%20University%2C%20Egypt!5e0!3m2!1sen!2seg!4v1603794290143!5m2!1sen!2seg" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Start -->
-    <footer
-      class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5"
-    >
-      <div class="row pt-5">
-        <div class="col-lg-4 col-md-12 mb-5">
-          <h1 class="mb-3 display-5 text-capitalize text-white">
-            <span class="text-primary">Adopt</span>ito
-          </h1>
-          <p class="m-0">
-            A humble yet significant website that serves as the foundation of
-            our online presence. As you scroll down our pet adoption website,
-            you'll find this unassuming space brimming with essential
-            information, connecting us with our valued users and supporters.
-          </p>
-        </div>
-        <div class="col-lg-8 col-md-12">
-          <div class="row">
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Get In Touch</h5>
-              <p>
-                <i class="fa fa-map-marker-alt mr-2"></i> Mokattam, Cairo, Egypt
-              </p>
-              <p><i class="fa fa-phone-alt mr-2"></i> +01154496852</p>
-              <p><i class="fa fa-envelope mr-2"></i> Adoptito@Gmail.com</p>
-              <div class="d-flex justify-content-start mt-4">
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a
-                  class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                  style="width: 36px; height: 36px"
-                  href="#"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Popular Links</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="index.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Home</a
-                >
-                <a class="text-white mb-2" href="about.html"
-                  ><i class="fa fa-angle-right mr-2"></i> About Us</a
-                >
-                <a class="text-white mb-2" href="service.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Our Services</a
-                >
-                <a class="text-white mb-2" href="dogs.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Pets For Adoption</a
-                >
-                <a class="text-white" href="contact.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Contact Us</a
-                >
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <h5 class="text-primary mb-4">Helpful Links</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="donate.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Donate</a
-                >
-                <a class="text-white mb-2" href="volunteer.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Volunteer</a
-                >
-                <a class="text-white mb-2" href="events.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Events</a
-                >
-                <a class="text-white mb-2" href="blog.html"
-                  ><i class="fa fa-angle-right mr-2"></i> Blog</a
-                >
-                <a class="text-white" href="faq.html"
-                  ><i class="fa fa-angle-right mr-2"></i> FAQ</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <footer class="bg-white pt-5 mt-5 border-top text-center py-4">
+        <p class="m-0 text-muted">&copy; 2026 Adoptito Marketplace. All Rights Reserved.</p>
     </footer>
-    <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"
-      ><i class="fa fa-angle-double-up"></i
-    ></a>
-
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
-  </body>
+</body>
 </html>
